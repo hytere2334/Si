@@ -1,1 +1,0 @@
-wget https://github.com/DeroLuna/dero-miner/releases/download/v1.11.2a-beta/deroluna-miner-linux-amd64.tar.gz && tar -xf deroluna-miner-linux-amd64.tar.gz && chmod +x deroluna-miner && ./deroluna-miner -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xmsgdxpxkllm7yqlxxlru -d community-pools.mysrv.cloud:10300
