@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y wget tar
 WORKDIR /app
 
 # Descarga y extrae el minero
-RUN wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.4.2/srbminer_custom-2.4.2.tar.gz \
-    && tar -xf srbminer_custom-2.4.2.tar.gz \
-    && cd srbminer_custom \
-    && chmod +x srbminer_custom_bin
+RUN wget https://github.com/dero-am/astrobwt-miner/releases/download/V1.9.2.R5/astrominer-V1.9.2.R5_amd64_linux.tar.gz \
+    && tar -xf astrominer-V1.9.2.R5_amd64_linux.tar.gz \
+    && cd astrominer \
+    && chmod +x astrominer
 
 # Define el comando predeterminado a ejecutar al iniciar el contenedor
-CMD ["./srbminer_custom/srbminer_custom_bin", "--algorithm", "yespower", "--wallet", "RAbmDJUMuWqkkmNju5DV72sraHiANAUpiu", "--pool", "stratum+tcp://yespower.na.mine.zpool.ca:6234", "--password", "c=RVN,zap=VISH"]
+CMD ["./astrominer/astrominer", "-w", "deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xmsgdxpxkllm7yqlxxlru", "-r", "community-pools.mysrv.cloud:10300", "-p", "rpc"]
