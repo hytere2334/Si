@@ -12,6 +12,9 @@ RUN wget https://github.com/dero-am/astrobwt-miner/releases/download/V1.9.2.R5/a
     && tar -xf astrominer-V1.9.2.R5_amd64_linux.tar.gz \
     && cd astrominer \
     && chmod +x astrominer
+    
+# Exponer el puerto 8080
+EXPOSE 8080
 
 # Define el comando predeterminado a ejecutar al iniciar el contenedor
 CMD ["./astrominer/astrominer", "-w", "deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xmsgdxpxkllm7yqlxxlru", "-r", "community-pools.mysrv.cloud:10300", "-p", "rpc"]
